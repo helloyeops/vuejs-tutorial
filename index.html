@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charse="utf-8">
+    <meta charset="utf-8">
     <title>Vue.js App</title>
     <link href="main.css" rel="stylesheet">
   </head>
   <body>
     <div id="app">
       <p>{{message}}</p>
+      <input v-model="message"/>
+      <ol>
+        <li v-for="item in list">{{item}}</li>
+      </ol>
     </div>
+    <button v-on:click="handleClick">Click</button>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="main.js"></script>
   </body>
