@@ -6,7 +6,7 @@ var app = new Vue({
   },
   methods: {
     handleClick: function(e) {
-      alert('click!')
+      alert('Click!!!')
     }
   }
 })
