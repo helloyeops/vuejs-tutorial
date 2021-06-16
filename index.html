@@ -6,14 +6,21 @@
     <link href="main.css" rel="stylesheet">
   </head>
   <body>
-    
+
     <div id="app">
       <p>{{message}}</p>
       <input v-model="message"/>
-      <ol>
+      <!-- <ol>
         <li v-for="item in list">{{item}}</li>
-      </ol>
+      </ol> -->
       <button v-on:click="handleClick">Click</button>
+      <div v-if="ok">v-if 조건으로 출력하기</div>
+      <div v-show="ok">v-show 조건으로 출력하기</div>
+      <ul>
+        <li v-for="item in list" v-bind:key="item.id">
+          ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+        </li>
+      </ul>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
